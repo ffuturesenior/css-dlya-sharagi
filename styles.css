@@ -19,38 +19,38 @@ body{
     flex: 1 0 auto;
     display: flex;
     width: 100vw;
+    background-color: rgb(27, 139, 23);
 }
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 992px) {
     .main {
         display: grid;
-        grid-template-columns: 100vw;
-        grid-template-rows: 100px 1fr 100px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr repeat(2,100px);
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
 
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 2 / 1 / 3 / 2; }
-    .div3 { grid-area: 3 / 1 / 4 / 2;background-color: blueviolet;  }
+    .aside2 { grid-area: 2 / 1 / 3 / 2; background-color: pink; }
+    .div2 { grid-area: 1 / 1 / 2 / 2; }
+    .aside5 { grid-area: 3 / 1 / 4 / 2;  }
 }
 
 
 /* Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
-    .main{
+    .main {
         display: grid;
-        grid-template-columns: 30% 1fr;
-        grid-template-rows: 1fr 100px;
+        grid-template-columns: repeat(2, 1fr);
+grid-template-rows: 1fr 100px;
         grid-column-gap: 0px;
         grid-row-gap: 0px;
     }
 
-
-    .div1 { grid-area: 1 / 1 / 2 / 2; }
-    .div2 { grid-area: 1 / 2 / 2 / 3; }
-    .div3 { grid-area: 2 / 1 / 3 / 3; background-color: blueviolet; }
+    .aside2 { grid-area: 2 / 1 / 3 / 2; background-color: pink; }
+    .div2 { grid-area: 1 / 1 / 2 / 3; }
+    .aside5 { grid-area: 2 / 2 / 3 / 3;  }
 }
 
 
@@ -62,7 +62,7 @@ body{
         display: flex;
         width: 100vw;
     }
-    .div3 { background-color: blueviolet; }
+    .aside2 { background-color: pink; }
 }
 
 
@@ -87,11 +87,17 @@ header{
 header nav{
     display: flex;
     justify-content: space-between;
+    transition: all 0.4s ease-in-out;
+}
+
+header nav{
+    display: flex;
+    justify-content: space-between;
 }
 
 header p{
     padding: 5px;
-    border:1px solid #fff;
+    transition: all 0.5s ease-in-out;
 }
 
 header p:hover{
@@ -103,7 +109,7 @@ header p:hover{
 
 footer{
     background-color: blue;
-    padding: 5px;
+    padding: 10px;
 }
 
 
@@ -115,5 +121,6 @@ footer{
 .flex-item{
     display: inline-block;
     padding: 50px;
-    background: red;
+    background: brown;
+    margin: 10px
 }
